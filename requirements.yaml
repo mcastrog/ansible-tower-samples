@@ -2,4 +2,3 @@
 collections:
   - name: ansible.builtin
     src: http://galaxy.ansible.com
-    version: 1.0.0
