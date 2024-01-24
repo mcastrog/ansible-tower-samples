@@ -1,5 +1,5 @@
 ---
 collections:
   - name: ansible.builtin
-    src: https://galaxy.ansible.com
+    src: http://galaxy.ansible.com
     version: 1.0.0
