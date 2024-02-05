@@ -1,2 +1,2 @@
 collections:
-  - name: controller
+  - name: ansible.controller
