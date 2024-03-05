@@ -6,4 +6,12 @@
     - name: Hello Message
       debug:
         msg: "{{ msg_var  }}"
+        
+    - name: incluyo variables
+      ansible.builtin.include_vars:
+        file: vars.yaml
+        name: msg_var
+    - name: Hello Message
+      debug:
+        msg: "{{ msg_var  }}"
 
