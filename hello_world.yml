@@ -38,6 +38,6 @@
     - name: Hello Message 5
       debug:
         msg: "{{ msg_var  }}"
-      environtment:
+      environment:
         msg_var: otro
 
