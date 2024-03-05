@@ -2,6 +2,7 @@
   hosts: all
   vars:
     msg_var: "Hello World!"
+    variables: "Hola mundo"
   tasks:
     - name: Hello Message
       debug:
@@ -10,8 +11,12 @@
     - name: incluyo variables
       ansible.builtin.include_vars:
         file: vars.yaml
-        name: msg_var
-    - name: Hello Message
+        name: variables
+        
+    - name: Hello Message 2
+      debug:
+        msg: "{{ variables  }}"
+    - name: Hello Message 3
       debug:
         msg: "{{ msg_var  }}"
 
