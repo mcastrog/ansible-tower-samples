@@ -9,7 +9,7 @@
         
     - name: incluyo variables
       ansible.builtin.include_vars:
-        file: vars.yaml
+        file: ./vars.yaml
         name: msg_var
     - name: Hello Message
       debug:
