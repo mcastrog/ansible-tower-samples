@@ -27,3 +27,11 @@
       debug:
         msg: "{{ msg_var  }}"
 
+    - name: SET
+      set_fact: msg_var="lola"
+
+    
+    - name: Hello Message 4
+      debug:
+        msg: "{{ msg_var  }}"
+
