@@ -34,4 +34,10 @@
     - name: Hello Message 4
       debug:
         msg: "{{ msg_var  }}"
+      
+    - name: Hello Message 5
+      debug:
+        msg: "{{ msg_var  }}"
+      environtment:
+        msg_var: otro
 
