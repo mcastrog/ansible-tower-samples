@@ -4,4 +4,10 @@
     msg_var: "Hello World!"
     variables: "Hola mundo"
   tasks:
+    - name: Add inventory
+      inventory:
+        name: "Foo Inventory"
+        description: "Our Foo Cloud Servers"
+        organization: "default"
+        state: present
 
