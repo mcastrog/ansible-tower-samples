@@ -15,4 +15,8 @@
         organization: "Default"
         validate_certs: false
         state: exists
+      register: variable 
+    - name: DEBUG
+      ansible.builtin.debug:
+        msg: "{{ variable.stdout }}"
 
