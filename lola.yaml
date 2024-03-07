@@ -1,22 +1,18 @@
-- name: Validar si inventario {{ inventario_aap }} existe
-
-  ansible.controller.inventory:
-
-    name: "{{ inventario_aapa }}"
-
-    state: present
-
-    organization: "{{ nombre_final[:3] }}O{{ nombre_final[4] }}"
-
-    controller_oauthtoken: "{{ bde_ansible_oauthtoken }}"
-
-    controller_host: "{{ bde_ansible_controller_url }}"
-
-  check_mode: true
-
-  register: result_existe
-
- 
+- name: Lola example
+  hosts: all
+  tasks:
+    - name: Add inventory
+      ansible.controller.inventory:
+        organization: "Default"
+        controller_oauthtoken: "d8kXff3yl8R7qiyp0tfWzpWIUxjaO1"
+        controller_hosts: "192.168.122.69"
+        controller_username: "admin"
+        controller_password: "password.12"
+        name: "Foo Inventory"
+        description: "Our Foo Cloud Servers"
+        validate_certs: false  
+        state: present
+      register: result_existe
 
 - name: No existe inventario
 
@@ -24,7 +20,7 @@
 
     inven_existe: "NO"
 
-    mensaje_salida: "{{ mensaje_salida }} Error: Inventario no existe: {{ inventario_aap }}."
+    mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
 
   when: result_existe is changed
 
@@ -35,6 +31,7 @@
   ansible.builtin.set_fact:
 
     inven_existe: "SI"
+    mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
 
   when: result_existe is not changed
 
