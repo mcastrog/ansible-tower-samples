@@ -18,5 +18,5 @@
       register: variable 
     - name: DEBUG
       ansible.builtin.debug:
-        msg: variable.stdout 
+        msg: variable
 
