@@ -9,6 +9,7 @@
         controller_username: "admin"
         controller_password: "password.12"
         name: "Foo Inventory"
+        controller_hosts: "192.168.122.69"
         controller_oauthtoken: "d8kXff3yl8R7qiyp0tfWzpWIUxjaO1"
         description: "Our Foo Cloud Servers"
         organization: "Default"
