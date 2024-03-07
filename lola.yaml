@@ -1,5 +1,8 @@
 - name: Lola example
   hosts: all
+  vars:
+    mensaje_salida: ""
+    inven_existe: ""
   tasks:
     - name: Add inventory
       ansible.controller.inventory:
