@@ -35,7 +35,6 @@
       ansible.builtin.set_fact:
 
         inven_existe: "SI"
-        mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
 
       when: result_existe is not changed
 
