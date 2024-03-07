@@ -8,6 +8,6 @@
       ansible.controller.inventory:
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
-        organization: "Default"
+        organization: "Defau"
         state: exists
 
