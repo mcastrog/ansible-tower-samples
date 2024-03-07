@@ -15,6 +15,7 @@
         description: "Our Foo Cloud Servers"
         validate_certs: false  
         state: present
+      check_mode: true
       register: result_existe
 
     - name: No existe inventario
