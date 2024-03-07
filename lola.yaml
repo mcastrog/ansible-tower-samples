@@ -14,32 +14,32 @@
         state: present
       register: result_existe
 
-- name: No existe inventario
+    - name: No existe inventario
 
-  ansible.builtin.set_fact:
+      ansible.builtin.set_fact:
 
-    inven_existe: "NO"
+        inven_existe: "NO"
 
-    mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
+        mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
 
-  when: result_existe is changed
-
- 
-
-- name: Existe inventario
-
-  ansible.builtin.set_fact:
-
-    inven_existe: "SI"
-    mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
-
-  when: result_existe is not changed
+      when: result_existe is changed
 
  
 
-- name: Resultado de la ejecución existe inventario
+    - name: Existe inventario
 
-  ansible.builtin.debug:
+      ansible.builtin.set_fact:
 
-    msg: "{{ mensaje_salida }}"
+        inven_existe: "SI"
+        mensaje_salida: "{{ inven_existe }} Error: Inventario no existe."
+
+      when: result_existe is not changed
+
+ 
+
+    - name: Resultado de la ejecución existe inventario
+
+      ansible.builtin.debug:
+
+        msg: "{{ mensaje_salida }}"
 
