@@ -44,5 +44,6 @@
 
       ansible.builtin.debug:
 
-        msg: "{{ mensaje_salida }}"
+        msg: "{{ mensaje_salida }} {{ result_existe  }}"
+        
 
