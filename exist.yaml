@@ -5,7 +5,7 @@
     variables: "Hola mundo"
   tasks:
     - name: Add inventory
-      inventory:
+      controller.inventory:
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         organization: "Default"
