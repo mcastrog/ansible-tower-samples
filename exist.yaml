@@ -14,5 +14,5 @@
         description: "Our Foo Cloud Servers"
         organization: "Default"
         validate_certs: false
-        state: exists
+        state: present
 
