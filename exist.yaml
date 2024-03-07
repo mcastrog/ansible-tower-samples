@@ -9,5 +9,5 @@
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         organization: "Default"
-        state: present
+        state: exists
 
