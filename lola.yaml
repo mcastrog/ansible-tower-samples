@@ -1,0 +1,48 @@
+- name: Validar si inventario {{ inventario_aap }} existe
+
+  ansible.controller.inventory:
+
+    name: "{{ inventario_aap }}"
+
+    state: present
+
+    organization: "{{ nombre_final[:3] }}O{{ nombre_final[4] }}"
+
+    controller_oauthtoken: "{{ bde_ansible_oauthtoken }}"
+
+    controller_host: "{{ bde_ansible_controller_url }}"
+
+  check_mode: true
+
+  register: result_existe
+
+ 
+
+- name: No existe inventario
+
+  ansible.builtin.set_fact:
+
+    inven_existe: "NO"
+
+    mensaje_salida: "{{ mensaje_salida }} Error: Inventario no existe: {{ inventario_aap }}."
+
+  when: result_existe is changed
+
+ 
+
+- name: Existe inventario
+
+  ansible.builtin.set_fact:
+
+    inven_existe: "SI"
+
+  when: result_existe is not changed
+
+ 
+
+- name: Resultado de la ejecución existe inventario
+
+  ansible.builtin.debug:
+
+    msg: "{{ mensaje_salida }}"
+
