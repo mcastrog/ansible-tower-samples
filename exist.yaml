@@ -6,6 +6,8 @@
   tasks:
     - name: Add inventory
       ansible.controller.inventory:
+        controller_username: "admin"
+        controller_password: "password.12"
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         organization: "Default"
