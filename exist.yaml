@@ -8,6 +8,6 @@
       inventory:
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
-        organization: "default"
+        organization: "Default"
         state: present
 
