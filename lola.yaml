@@ -14,7 +14,7 @@
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         validate_certs: false  
-        state: "exists"
+        state: "{{ estado }}"
       #check_mode: true
       register: result_existe
 
