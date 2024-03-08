@@ -10,7 +10,7 @@
         controller_oauthtoken: "d8kXff3yl8R7qiyp0tfWzpWIUxjaO1"
         controller_host: "192.168.122.69"
         controller_username: "admin"
-        controller_password: "password.12"
+       # controller_password: "password.12"
         name: "Foo Inventory"
         description: "Our Foo Cloud Servers"
         validate_certs: false  
