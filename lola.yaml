@@ -16,6 +16,7 @@
         validate_certs: false  
         state: "{{ estado }}"
       check_mode: true
+      diff: true
       register: result_existe
 
     - name: No existe inventario
